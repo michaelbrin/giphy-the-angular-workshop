@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GiphySearchFormComponent implements OnInit {
 
+  searchTerm:string;
   constructor() { }
 
   ngOnInit() {

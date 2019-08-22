@@ -3,7 +3,7 @@
         <div class="card-body">
             <form class="form-inline">
                 <input type="text" class="form-control mr-10" placeholder="Search" name="searchTerm" [(ngModel)]="searchTerm">
-                <button type="submit" class="btn btn-dark">Search</button>
+                <button type="submit" class="btn btn-dark" (click)="search()">Search</button>
             </form>
         </div>
     </div>

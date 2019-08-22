@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-giphy-search-form',
@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./giphy-search-form.component.css']
 })
 export class GiphySearchFormComponent implements OnInit {
-
+  @Output() emitSearch = new EventEmitter<any>()
+  
   searchTerm:string;
   constructor() { }
+
+  search(){
+    this.emitSearch.emit(this.searchTerm);
+  }
 
   ngOnInit() {
   }

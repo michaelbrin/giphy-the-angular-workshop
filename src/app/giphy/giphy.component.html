@@ -1,3 +1,12 @@
 <div>
     <app-giphy-search-form (emitSearch)="searchGiphy($event)"></app-giphy-search-form>
+    <div *ngIf="giphies">
+        <div class="card-columns">
+            <div *ngFor="let giphy of giphies">
+                <div class="card">
+                    <img src="{{giphy.url}}" class="card-img">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GiphyHttpServiceService} from '../services/giphy-http-service.service';
 
 @Component({
   selector: 'app-giphy',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GiphyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public giphyHttpService:GiphyHttpServiceService) { }
 
   ngOnInit() {
   }
 
   searchGiphy(searchTerm){
-      console.log(searchTerm);
+      this.giphyHttpService.searchGiphies(searchTerm)
   }
 
 }

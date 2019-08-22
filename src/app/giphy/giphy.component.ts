@@ -12,6 +12,7 @@ export class GiphyComponent implements OnInit {
 	constructor(public giphyHttpService:GiphyHttpServiceService) { }
 
 	ngOnInit() {
+		this.searchGiphy("lion king");
 	}
 
 	searchGiphy(searchTerm){
